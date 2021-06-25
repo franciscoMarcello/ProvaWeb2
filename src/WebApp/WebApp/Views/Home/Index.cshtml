@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bem Vindo! Amazonia Veiculos </h1>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-sm-12">
+        <form asp-controller="Home" asp-action="PesquisaResult">
+            <p>
+                Marca: <input type="text" name="SearchString" />
+                <input class="btn-success" type="submit" value="Pesquisar" />
+            </p>
+        </form>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <form asp-controller="Home" asp-action="PesquisaModelo">
+            <p>
+                Modelo: <input type="text" name="PesquisaModelo" />
+                <input class="btn-success" type="submit" value="Pesquisar" />
+            </p>
+        </form>
+
+        <div>
+            <img src="~/imagem - Cópia/fusca.jpg" width="800" height="500" />
+        </div>
+    </div>
+</div>
+

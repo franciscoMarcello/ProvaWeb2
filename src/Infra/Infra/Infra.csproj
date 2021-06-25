@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210625120758_2506.cs" />
+    <Compile Remove="Migrations\20210625120758_2506.Designer.cs" />
+    <Compile Remove="Migrations\20210625123440_2506.cs" />
+    <Compile Remove="Migrations\20210625123440_2506.Designer.cs" />
+    <Compile Remove="Migrations\20210625124119_2506.cs" />
+    <Compile Remove="Migrations\20210625124119_2506.Designer.cs" />
+    <Compile Remove="Migrations\20210625124512_2506.cs" />
+    <Compile Remove="Migrations\20210625124512_2506.Designer.cs" />
+    <Compile Remove="Migrations\20210625125131_2506.cs" />
+    <Compile Remove="Migrations\20210625125131_2506.Designer.cs" />
+    <Compile Remove="Migrations\20210625143424_2506.cs" />
+    <Compile Remove="Migrations\20210625143424_2506.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dominio\Dominio\Dominio.csproj" />
+  </ItemGroup>
+
+</Project>

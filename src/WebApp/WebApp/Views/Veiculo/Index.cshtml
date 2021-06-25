@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebApp.Models.VeiculoViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Lista de Veiculos</h1>
+
+<p>
+    <a asp-action="Criar" class="btn btn-primary">Novo</a>
+</p>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quilometragem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ano)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Marca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modelo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quilometragem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ano)
+            </td>
+            <td>
+
+                @Html.ActionLink("Alterar", "Alterar", new { id = item.Id }) -
+                @Html.ActionLink("Detalhar", "Detalhar", new { id = item.Id }) -
+                @Html.ActionLink("Excluir", "Excluir", new {  id=item.Id  })
+
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
